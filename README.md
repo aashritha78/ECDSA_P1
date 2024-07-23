@@ -1,21 +1,14 @@
-# ECDSA_P1
-This project demonstrates the implementation of the Elliptic Curve Digital Signature Algorithm (ECDSA) within a blockchain framework. The goal is to provide a secure and efficient way to handle digital signatures and transactions, utilizing ECDSA for signing and verifying messages. 
-The project includes a frontend interface featuring a digital wallet that supports key generation, message signing, and secure transfer functionalities.
+## ECDSA Node
 
-Features:
-Elliptic Curve Digital Signature Algorithm (ECDSA): Implements ECDSA for secure digital signatures and message verification.
-Blockchain Integration: Integrates with blockchain technology to provide a secure, tamper-proof ledger for transactions.
-Digital Wallet Interface: A user-friendly frontend interface for generating key pairs, signing messages, and performing secure transfers.
-Message Signing and Verification: Supports signing messages with private keys and verifying signatures with public keys.
-Secure Key Management: Ensures secure generation and handling of private and public keys.
-Transaction Functionality: Facilitates secure transaction transfers between digital wallets.
+This project is an example of using a client and server to facilitate transfers between different addresses. Since there is just a single server on the back-end handling transfers, this is clearly very centralized. We won't worry about distributed consensus for this project.
 
-How It Works:
-Key Generation: Generate a pair of public and private keys using ECDSA.
-Message Signing: Use the private key to sign a message, ensuring its authenticity and integrity.
-Message Verification: Verify the signed message using the corresponding public key.
-Transaction Transfer: Transfer signed transactions securely within the blockchain network, ensuring each transaction is authenticated and validated.
+However, something that we would like to incoporate is Public Key Cryptography. By using Elliptic Curve Digital Signatures we can make it so the server only allows transfers that have been signed for by the person who owns the associated address.
 
+### Video instructions
+For an overview of this project as well as getting started instructions, check out the following video:
+
+https://www.loom.com/share/0d3c74890b8e44a5918c4cacb3f646c4
+ 
 ### Client
 
 The client folder contains a [react app](https://reactjs.org/) using [vite](https://vitejs.dev/). To get started, follow these steps:
@@ -34,3 +27,5 @@ The server folder contains a node.js server using [express](https://expressjs.co
 3. Run `node index` to start the server 
 
 The application should connect to the default server port (3042) automatically! 
+
+_Hint_ - Use [nodemon](https://www.npmjs.com/package/nodemon) instead of `node` to automatically restart the server on any changes.
